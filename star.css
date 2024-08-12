@@ -1346,3 +1346,34 @@ footer {
   .menu-toggle:hover {
     background-color: #444;
   }
+  /* Home Icon Hover Effect */
+.home-icon img {
+    transition: transform 0.3s ease;
+    color: purple;
+}
+
+.home-icon:hover img {
+    transform: scale(1.1);
+    filter: brightness(1.2) /* Scale up the icon */
+    
+}
+
+/* Hyderabad Link Hover Effect */
+#hyderabad-link {
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+#hyderabad-link:hover {
+    color: purple; /* Change color on hover */
+    text-decoration: underline; /* Underline on hover */
+}
+
+/* Vizag Link Hover Effect */
+#vizag-link {
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+#vizag-link:hover {
+    color: purple; /* Change color on hover */
+    text-decoration: underline; /* Underline on hover */
+}
