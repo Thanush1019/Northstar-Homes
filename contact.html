@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us - Northstar Homes</title>
     <link rel="stylesheet" href="star.css">
+  
 </head>
 <body>
     <header>
@@ -12,11 +13,11 @@
             <div class="nav-left">
                 <a href="index.html" class="home-icon"><img src="home.png" alt="Home"></a>
                 <span class="separator">/</span>
-                <a href="hyderabad.html">HYDERABAD</a>
+                <a href="hyderabad.html" id="hyderabad-button">HYDERABAD</a>
                 
                 
                 <span class="separator">/</span>
-                <a href="vizag.html">VIZAG</a>
+                <a href="vizag.html" id="vizag-button">VIZAG</a>
             </div>
             <div class="nav-center">
                 <img src="nothstar-logo_1.png" alt="NORTHSTAR HOMES" class="logo">
@@ -195,6 +196,41 @@
                     <a href="#">CONTACT</a>
                     <a href="#">CREDAI</a>
                   </div>
+                  <div id="projects-popup" class="popup" style="display: none;">
+                    <div class="popup-content">
+                        <span class="close">&times;</span>
+                        <h2>ONGOING</h2>
+                        <ul>
+                            <li>ALLURA</li>
+                            <li>SP PALACIO</li>
+                            <li>SANCTUARY</li>
+                            <li>AIRPORT BOULEVARD COMMERCIAL</li>
+                        </ul>
+                        <h2>COMPLETED</h2>
+                        <ul>
+                            <li>THE LEELA</li>
+                            <li>EDEN GARDEN</li>
+                            <li>HILLSIDE</li>
+                            <li>AIRPORT BOULEVARD</li>
+                            <li>GARDENSUITES</li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="vizag-popup" class="popup" style="display: none;">
+                    <div class="popup-content">
+                        <span class="close">&times;</span>
+                        <h2>ONGOING</h2>
+                        <ul>
+                            <li>PARK AVE</li>
+                            <li>GOLDEN VALLEY</li>
+                        </ul>
+                        <h2>COMPLETED</h2>
+                        <ul>
+                            <li>EDEN GARDEN</li>
+                        </ul>
+                    </div>
+                </div>
+                 
 
    
     
@@ -221,6 +257,52 @@
       }
     });
   });
+  document.addEventListener('DOMContentLoaded', function() {
+    const hyderabadButton = document.getElementById('hyderabad-button');
+    const hyderabadPopup = document.getElementById('projects-popup'); // Ensure this ID matches your popup's ID
+    const closeBtn = hyderabadPopup.querySelector('.close');
+
+    // Show the popup when the button is clicked
+    hyderabadButton.addEventListener('click', function(e) {
+        e.preventDefault();
+        hyderabadPopup.style.display = 'block';
+    });
+
+    // Close the popup when the close button is clicked
+    closeBtn.addEventListener('click', function() {
+        hyderabadPopup.style.display = 'none';
+    });
+
+    // Close the popup when clicking outside of it
+    window.addEventListener('click', function(e) {
+        if (e.target == hyderabadPopup) {
+            hyderabadPopup.style.display = 'none';
+        }
+    });
+});
+document.addEventListener('DOMContentLoaded', function() {
+    const vizagButton = document.getElementById('vizag-button');
+    const vizagPopup = document.getElementById('vizag-popup'); // Ensure this ID matches your popup's ID
+    const closeBtn = vizagPopup.querySelector('.close');
+
+    // Show the popup when the button is clicked
+    vizagButton.addEventListener('click', function(e) {
+        e.preventDefault();
+        vizagPopup.style.display = 'block';
+    });
+
+    // Close the popup when the close button is clicked
+    closeBtn.addEventListener('click', function() {
+        vizagPopup.style.display = 'none';
+    });
+
+    // Close the popup when clicking outside of it
+    window.addEventListener('click', function(e) {
+        if (e.target == vizagPopup) {
+            vizagPopup.style.display = 'none';
+        }
+    });
+});
   
         
       
